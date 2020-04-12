@@ -1,4 +1,4 @@
-# Chest X-Ray classification (CheXpert dataset)
+# Chest X-Ray classification (CheXpert dataset) - Team 33
 
 
 # Setup
@@ -36,7 +36,7 @@ Copy the dataset to HDFS:
 # hdfs dfs -put CheXpert-v1.0-small project
 ```
 
-Please not that this initial step may take some time. If you want to monitor the copy of the ~10.7GB of data, you may use the following command on a distinct terminal:
+Please note that this initial step may take some time. If you want to monitor the copy of the ~10.7GB of data, you may use the following command on a distinct terminal:
 ```
 # watch -n 0.5 -d "hdfs dfs -du -s -h project"
 ```
