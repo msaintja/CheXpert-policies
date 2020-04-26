@@ -1,4 +1,4 @@
-# Chest X-Ray classification (CheXpert dataset) - Team 33
+# Exploring Policies For Disease Identification In Chest X-rays (CheXpert dataset) - Team33
 
 
 # Setup
@@ -126,6 +126,9 @@ Run `train_val_test_split.scala` in `spark-shell` to get a proper validation spl
 # $SPARK_HOME/bin/spark-shell --master "local[4]" --driver-memory 10G -i ../code/train_val_test_split.scala
 ```
 
+> NOTE: By default, this file will result in implementing a I-Zeros, U-0.66 policy. You may change this according to the comments provided in the file.  
+  
+
 Copy over the resulting files from HDFS to your local filesystem storage:
 
 ```
@@ -148,6 +151,7 @@ For example, using pip:
 ```
 # pip install -r requirements.txt
 ```
+> NOTE: By default, this file will result in implementing a I-Zeros, U-0.66 policy. You may change this according to the comments provided in the file.  
 
 Please note that we have currently found issues (also mentioned [here](https://stackoverflow.com/questions/60478862/how-to-avoid-runtimeerror-error-in-loadlibrarya-for-torch-cat)) with CUDA-enabled learning on Windows with the latest Pytorch versions (1.4.0) and Python 3.8.x. We recommend downgrading to Python 3.7.6 for now should you choose to use Windows.  
 

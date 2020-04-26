@@ -117,14 +117,15 @@ class DenseNet161(nn.Module):
 # In[ ]:
 
 
-NUM_EPOCHS = 5
-BATCH_SIZE = 48
+NUM_EPOCHS = 10
+BATCH_SIZE = 64
 lr = 0.001
 weight_decay = 0
 device = torch.device("cuda" if cuda else "cpu")
 pretrained = False
 
-model = DenseNet161(n_classes, pretrained)
+model = ResNet152(n_classes, pretrained)
+criterion = F.binary_cross_entropy
 
 
 # In[ ]:
@@ -162,7 +163,6 @@ test_loader = torch.utils.data.DataLoader(test_dataset,
 # In[ ]:
 
 
-criterion = F.binary_cross_entropy
 if cuda:
     model.cuda()
 
